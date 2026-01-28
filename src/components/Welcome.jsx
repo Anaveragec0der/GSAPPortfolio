@@ -9,7 +9,6 @@ const FONT_WEIGHTS={
 
 const setupTextHover=(container, type)=>{
     if (!container) return
-    console.log(container, 'container')
     const letters =container.querySelectorAll('span')
     const {min, max, default:base}= FONT_WEIGHTS[type]
 
@@ -40,6 +39,10 @@ const setupTextHover=(container, type)=>{
     }
     container.addEventListener('mousemove', handleMouseMove)
     container.addEventListener('mouseleave', handleMouseLeave)
+    return ()=>{
+        container.removeEventListener('mousemove', handleMouseMove)
+        container.removeEventListener('mouseleave', handleMouseLeave)
+    }
 }
 
 const renderText=(text, className, baseWeight=400)=>{
