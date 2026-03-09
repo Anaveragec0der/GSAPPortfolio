@@ -50,8 +50,9 @@ export default function Dock() {
 
     const toggleApp = ({ id, canOpen }) => {
         if (!canOpen) return
+        console.log(windows, 'windows')
         const window = windows[id]
-        if (!window){
+        if (!window) {
             console.error(`Window not found with id ${id}`)
             return
         }
