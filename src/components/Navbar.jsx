@@ -11,7 +11,7 @@ export default function Navbar() {
                 <img src="/images/logo.svg" alt='apple logo' />
                 <p className="font-bold">My Portfolio</p>
                 <ul>
-                    {navLinks.map(({ id, name, type }) => (
+                    {navLinks.map(({ id, name, type }) => (   
                         <li key={id} onClick={()=>openWindow(type)}>
                             <p>{name}</p>
                         </li>
