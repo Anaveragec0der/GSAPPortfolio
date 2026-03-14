@@ -7,7 +7,7 @@ import Home from "./Home"
 export {
     Navbar,
     Welcome,
-    Dock, 
+    Dock,
     WindowControls,
     Home
 }

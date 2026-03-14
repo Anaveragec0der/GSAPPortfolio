@@ -7,7 +7,7 @@ const Terminal = () => {
     return (
         <>
             <div id='window-header'>
-                <WindowControls target='terminal'/>
+                <WindowControls target='terminal' />
                 <h2>Tech Stack</h2>
             </div>
             <div className="techstack">
@@ -20,13 +20,13 @@ const Terminal = () => {
                     <p>Technologies</p>
                 </div>
                 <ul className="content">
-                    {techStack.map(({category, items})=>(
+                    {techStack.map(({ category, items }) => (
                         <li key={category} className="flex items-center">
                             <Check className="check" size={20} />
                             <h3>{category}</h3>
                             <ul>
-                                {items.map((item, i)=>(
-                                    <li key={i}>{item}{i< items.length-1 &&','}</li>
+                                {items.map((item, i) => (
+                                    <li key={i}>{item}{i < items.length - 1 && ','}</li>
                                 ))}
                             </ul>
                         </li>
@@ -34,10 +34,10 @@ const Terminal = () => {
                 </ul>
                 <div className="footnote">
                     <p>
-                        <Check size={20}/> 5 of 5 stack loaded successfully (100%)
+                        <Check size={20} /> 5 of 5 stack loaded successfully (100%)
                     </p>
                     <p className="text-black">
-                        <Flag size={15} fill='black'/>
+                        <Flag size={15} fill='black' />
                         Render time: 6ms
                     </p>
                 </div>
